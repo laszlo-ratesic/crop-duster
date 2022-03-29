@@ -20,4 +20,16 @@ router.get("/pricing", (req, res) => {
   res.render("pricing");
 });
 
+router.get("/sign-in", (req, res) => {
+  res.render("sign-in", {layout: 'auth.hbs'});
+});
+
+router.get("/sign-up", (req, res) => {
+  res.render("sign-up", {layout: 'auth.hbs'});
+});
+
+router.get("/forgot-password", (req, res) => {
+  res.render("forgot-password", {layout: 'auth.hbs'});
+});
+
 module.exports = router;
