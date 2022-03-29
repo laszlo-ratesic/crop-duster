@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    {{!-- Meta tags and rel links --}}
     {{> head}}
   </head>
   <body class="bg-light">
     <div id="db-wrapper">
-        {{> sidebar}}
-        
-       {{{ body }}}
+      {{!-- Vertical Sidebar --}}
+      {{> sidebar}}
+      {{!-- Page Content --}}
+      <div id="page-content">
+        {{!-- Top Navbar --}}
+        {{> navbar}}
+        {{!-- Current View --}}
+        {{{ body }}}
+      </div>
     </div>
+    {{!-- Javascript and lib modules --}}
     {{> scripts}}
   </body>
 </html>
