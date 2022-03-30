@@ -1,0 +1,26 @@
+<!-- Container fluid -->
+<div class="container-fluid p-6">
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-12">
+      <!-- Page header -->
+      <div class="border-bottom pb-4 mb-4">
+        <h3 class="mb-0 fw-bold">
+          Stream
+        </h3>
+      </div>
+    </div>
+  </div>
+  <!-- content -->
+  <div class="py-6">
+    <!-- row -->
+    <div class="row" data-masonry="{"percentPosition": true }" style="position: relative; height: 690px;">
+        {{> new-user-card}}
+        {{> quote-card}}
+        {{> wilson}}
+        {{> app-message-card}}
+        {{> announcement-card}}
+        {{> image-card}}
+        {{> opinion-card}}
+    </div>
+  </div>
+</div>

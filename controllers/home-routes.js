@@ -4,6 +4,10 @@ router.get("/", (req, res) => {
   res.render("dashboard");
 });
 
+router.get("/stream", (req, res) => {
+  res.render("stream");
+});
+
 router.get("/sign-in", (req, res) => {
   res.render("sign-in", {layout: 'auth.hbs'});
 });
