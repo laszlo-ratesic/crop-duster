@@ -124,7 +124,11 @@
           <div class="px-4 pb-0 pt-2">
             <div class="lh-1">
               <h5 class="mb-1">
+                {{#if loggedIn}}
                 {{username}}
+                {{else}}
+                Guest
+                {{/if}}
               </h5>
               <a href="/profile" class="text-inherit fs-6">
                 View my profile
@@ -133,6 +137,8 @@
             <div class="dropdown-divider mt-3 mb-2"></div>
           </div>
           <ul class="list-unstyled">
+            {{#if loggedIn}}
+            {{!-- Edit Profile --}}
             <li>
               <a class="dropdown-item" href="#">
                 <i
@@ -143,6 +149,7 @@
                 Profile
               </a>
             </li>
+            {{!-- Activity Log --}}
             <li>
               <a class="dropdown-item" href="#">
                 <i
@@ -152,8 +159,9 @@
                 Activity Log
               </a>
             </li>
+            {{!-- Go Pro --}}
             <li>
-              <a class="dropdown-item text-primary" href="#">
+              <a class="dropdown-item text-primary" href="/pricing">
                 <i
                   class="me-2 icon-xxs text-primary dropdown-item-icon"
                   data-feather="star"
@@ -161,6 +169,7 @@
                 Go Pro
               </a>
             </li>
+            {{!-- Account Settings --}}
             <li>
               <a class="dropdown-item" href="/settings">
                 <i
@@ -170,6 +179,7 @@
                 Account Settings
               </a>
             </li>
+            {{!-- Sign-Out --}}
             <li>
               <a class="dropdown-item" href="/sign-out">
                 <i
@@ -179,6 +189,48 @@
                 Sign Out
               </a>
             </li>
+            {{else}}
+            {{!-- Sign-in --}}
+            <li>
+              <a class="dropdown-item" href="/sign-in">
+                <i
+                  class="me-2 icon-xxs dropdown-item-icon"
+                  data-feather="log-in"
+                ></i>
+                Sign In
+              </a>
+            </li>
+            {{!-- Sign-up --}}
+            <li>
+              <a class="dropdown-item" href="/sign-up">
+                <i
+                  class="me-2 icon-xxs dropdown-item-icon"
+                  data-feather="user-plus"
+                ></i>
+                Sign Up
+              </a>
+            </li>
+            {{!-- Go Pro --}}
+            <li>
+              <a class="dropdown-item text-primary" href="/pricing">
+                <i
+                  class="me-2 icon-xxs text-primary dropdown-item-icon"
+                  data-feather="star"
+                ></i>
+                Go Pro
+              </a>
+            </li>
+            {{!-- Forgot Password --}}
+            <li>
+              <a class="dropdown-item" href="/forgot-password">
+                <i
+                  class="me-2 icon-xxs dropdown-item-icon"
+                  data-feather="key"
+                ></i>
+                Forgot Password
+              </a>
+            </li>
+            {{/if}}
           </ul>
         </div>
       </li>

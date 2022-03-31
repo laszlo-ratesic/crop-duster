@@ -29,7 +29,9 @@ router.get('/sign-up', (req, res) => {
 });
 
 router.get('/sign-out', (req, res) => {
-  res.render('sign-out', { layout: 'auth.hbs' });
+  if (req.session.loggedIn) {
+    res.render('sign-out', { layout: 'auth.hbs' });
+  }
 });
 
 router.get('/forgot-password', (req, res) => {
