@@ -1,8 +1,15 @@
 {{! WILSON }}
-<div class="scroll-reveal col-sm-6 col-lg-4 mb-3 col">
-  <div class="card">
+<div class="scroll-reveal col-sm-6 col-lg-4 mb-3 col text-light">
+  <div
+    class="card"
+    data-tilt=""
+    data-tilt-glare=""
+    data-tilt-max-glare="0.8"
+    data-tilt-scale="1.1"
+    style="transform-style:preserve-3d; transform: perspective(2000px); background: linear-gradient(45deg,#ff512f,#dd2476);"
+  >
     <!-- card body -->
-    <div class="card-body">
+    <div class="card-body" style="transform: translateZ(75px);">
       <div
         class="d-flex justify-content-between mb-5
                       align-items-center"
@@ -17,7 +24,7 @@
             />
           </div>
           <div class="ms-3">
-            <h5 class="mb-0 fw-bold">
+            <h5 class="mb-0 fw-bold text-warning">
               Wilson
             </h5>
             <p class="mb-0">
@@ -67,7 +74,7 @@
       <!-- icons -->
       <div>
         <span class="me-1 me-md-4">
-          <i data-feather="heart" class="icon-xxs text-muted me-2"></i>
+          <i data-feather="heart" class="icon-xxs me-2 text-warning"></i>
           <span>
             20
           </span>
@@ -75,8 +82,7 @@
         <span class="me-1 me-md-4">
           <i
             data-feather="message-square"
-            class="icon-xxs
-                          text-muted me-2"
+            class="icon-xxs me-2 text-warning"
           ></i>
           <span>
             12
@@ -85,8 +91,7 @@
         <span>
           <i
             data-feather="share-2"
-            class="icon-xxs
-                          text-muted me-2"
+            class="icon-xxs me-2 text-warning"
           ></i>
         </span>
       </div>
