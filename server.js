@@ -42,6 +42,6 @@ app.use(routes);
 // Turn on connection to DB and server
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () =>
-    console.log(gradient.instagram(`Now listening @ http://localhost:${PORT}`))
+    console.log(gradient.fruit(`Now listening @ http://localhost:${PORT}`))
   );
 });
