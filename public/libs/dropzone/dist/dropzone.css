@@ -210,13 +210,13 @@
   padding: 20px 20px;
 }
 .dropzone.dz-clickable {
-  cursor: pointer;
+  cursor: none;
 }
 .dropzone.dz-clickable * {
   cursor: default;
 }
 .dropzone.dz-clickable .dz-message, .dropzone.dz-clickable .dz-message * {
-  cursor: pointer;
+  cursor: none;
 }
 .dropzone.dz-started .dz-message {
   display: none;
@@ -237,7 +237,7 @@
   border: none;
   padding: 0;
   font: inherit;
-  cursor: pointer;
+  cursor: none;
   outline: inherit;
 }
 .dropzone .dz-preview {
@@ -275,7 +275,7 @@
   font-size: 14px;
   text-align: center;
   display: block;
-  cursor: pointer;
+  cursor: none;
   border: none;
 }
 .dropzone .dz-preview .dz-remove:hover {
