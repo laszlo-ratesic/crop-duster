@@ -38,6 +38,10 @@ router.get('/forgot-password', (req, res) => {
   res.render('forgot-password', { layout: 'auth.hbs' });
 });
 
+router.get('/doodle', (req, res) => {
+  res.render('doodle', { layout: 'auth.hbs' });
+});
+
 router.get('/pricing', (req, res) => {
   res.render('pricing');
 });
