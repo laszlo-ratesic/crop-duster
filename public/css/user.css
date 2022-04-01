@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-/* @media screen and (max-width: 570px) {
-    #doodlewall {
-      display: none;
-      
-    }
-  } */
-
-@media only screen and (max-width: 768px) {
-  #small-screen-img {
-    display: none;
-  }
-=======
 * {
   cursor: none;
 }
@@ -63,5 +50,4 @@ canvas {
   -webkit-box-shadow: 0px 3px 12px -2px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 3px 12px -2px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 3px 12px -2px rgba(0, 0, 0, 0.75);
->>>>>>> ab79da3655f0940b0abab42ac34e8f3cac436985
 }
