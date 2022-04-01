@@ -1,0 +1,12 @@
+/* @media screen and (max-width: 570px) {
+    #doodlewall {
+      display: none;
+      
+    }
+  } */
+
+@media only screen and (max-width: 768px) {
+  #small-screen-img {
+    display: none;
+  }
+}
