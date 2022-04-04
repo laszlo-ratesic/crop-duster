@@ -28,6 +28,7 @@
     "express-session": "^1.17.2",
     "feather-icons": "^4.28.0",
     "gradient-string": "^2.0.0",
-    "mysql2": "^2.3.3"
+    "mysql2": "^2.3.3",
+    "paper": "^0.12.15"
   }
 }
