@@ -112,7 +112,11 @@
           <div class="avatar avatar-md avatar-indicators avatar-online">
             <img
               alt="avatar"
-              src="/images/avatar/avatar-1.jpg"
+              {{#if loggedIn}}
+                src="https://avatars.dicebear.com/api/croodles/{{id}}.svg?background=%23ffffff"
+              {{else}}
+                src="https://avatars.dicebear.com/api/croodles/0.svg?background=%23ffffff"
+              {{/if}}
               class="rounded-circle"
             />
           </div>

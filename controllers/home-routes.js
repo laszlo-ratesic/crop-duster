@@ -1,11 +1,7 @@
 const router = require('express').Router();
 
 router.get('/', (req, res) => {
-  res.render('stream');
-});
-
-router.get('/stream', (req, res) => {
-  res.render('stream');
+  res.redirect('/stream');
 });
 
 router.get('/sign-in', (req, res) => {
