@@ -1,23 +1,7 @@
 const router = require('express').Router();
 
 router.get('/', (req, res) => {
-  res.render('stream');
-});
-
-router.get('/stream', (req, res) => {
-  res.render('stream');
-});
-
-router.get('/dashboard', (req, res) => {
-  if (req.session.loggedIn) {
-    res.render('dashboard', {
-      loggedIn: req.session.loggedIn,
-      id: req.session.user_id,
-      username: req.session.username,
-    });
-  } else {
-    res.redirect('/sign-in');
-  }
+  res.redirect('/stream');
 });
 
 router.get('/sign-in', (req, res) => {

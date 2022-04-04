@@ -1,0 +1,38 @@
+<!-- row  -->
+<div class="row my-6">
+  <!-- card  -->
+  <div class="col-xl-12 col-lg-12 col-md-12 col-12">
+    <div class="card h-100">
+      <!-- card header  -->
+      <div class="card-header bg-white py-4">
+        <h4 class="mb-0">
+          Your Posts
+        </h4>
+      </div>
+      <!-- table  -->
+      <div class="table-responsive">
+        <table class="table text-wrap">
+          <thead class="table-light">
+            <tr>
+              <th>
+                Title
+              </th>
+              <th>
+                Comments
+              </th>
+              <th>
+                Date Created
+              </th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each posts as |post|}}
+                {{> post-info post}}
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
