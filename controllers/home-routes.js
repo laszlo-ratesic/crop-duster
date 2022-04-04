@@ -8,18 +8,6 @@ router.get('/stream', (req, res) => {
   res.render('stream');
 });
 
-router.get('/dashboard', (req, res) => {
-  if (req.session.loggedIn) {
-    res.render('dashboard', {
-      loggedIn: req.session.loggedIn,
-      id: req.session.user_id,
-      username: req.session.username,
-    });
-  } else {
-    res.redirect('/sign-in');
-  }
-});
-
 router.get('/sign-in', (req, res) => {
   res.render('sign-in', { layout: 'auth.hbs' });
 });
