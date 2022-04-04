@@ -25,7 +25,7 @@ div.code-toolbar > .toolbar > .toolbar-item {
 }
 
 div.code-toolbar > .toolbar > .toolbar-item > a {
-	cursor: pointer;
+	cursor: none;
 }
 
 div.code-toolbar > .toolbar > .toolbar-item > button {
