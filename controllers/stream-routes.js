@@ -26,7 +26,7 @@ router.get('/', (req, res) => {
         posts,
         loggedIn: req.session.loggedIn,
         id: req.session.user_id,
-        username: req.session.username
+        username: req.session.username,
       });
     })
     .catch((err) => {
