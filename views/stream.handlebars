@@ -14,6 +14,9 @@
   <div class="py-6">
     <!-- row -->
     <div class="row" data-masonry='{"percentPosition": true,  "itemSelector": ".col" }'>
+      {{#each posts as |post|}}
+        {{> card post}}
+      {{/each}}
         {{> new-user-card}}
         {{> quote-card}}
         {{> wilson}}

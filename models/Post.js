@@ -15,6 +15,10 @@ Post.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    subtitle: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     post_text: {
       type: DataTypes.TEXT('long'),
       allowNull: false,

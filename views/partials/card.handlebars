@@ -1,0 +1,93 @@
+<div class="scroll-reveal col-sm-6 col-lg-4 mb-3 col text-light">
+  <div
+    class="card"
+    data-tilt=""
+    data-tilt-glare=""
+    data-tilt-max-glare="0.8"
+    data-tilt-scale="1.1"
+    style="transform-style:preserve-3d; transform: perspective(1500px); background: linear-gradient(45deg,#313131,#000);"
+  >
+    <!-- card body -->
+    <div class="card-body" style="transform: translateZ(75px);">
+      <div
+        class="d-flex justify-content-between mb-5
+                      align-items-center"
+      >
+        <!-- avatar -->
+        <div class="d-flex align-items-center">
+          <div>
+            <img
+              src="https://avatars.dicebear.com/api/croodles/{{user.id}}.svg?background=%23ffffff"
+              alt=""
+              class="avatar avatar-md rounded-circle"
+            />
+          </div>
+          <div class="ms-3">
+            <h5 class="mb-0 fw-bold text-info">
+              {{user.username}}
+            </h5>
+            <p class="mb-0">
+              {{format_date created_at}}
+            </p>
+          </div>
+        </div>
+        <!-- dropdown -->
+        <div>
+          <div class="dropdown dropstart">
+            <a
+              href="#"
+              class="text-muted text-primary-hover"
+              id="dropdownprojectFive"
+              data-bs-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <i data-feather="more-vertical" class="icon-xxs"></i>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownprojectFive">
+              <a class="dropdown-item" href="#">
+                Action
+              </a>
+              <a class="dropdown-item" href="#">
+                Another action
+              </a>
+              <a class="dropdown-item" href="#">
+                Something else
+                              here
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- text -->
+      <div class="mb-3">
+        <p class="mb-3">
+            {{post_text}}
+        </p>
+        <img
+          src="./images/blog/blog-img-1.jpg"
+          class="rounded-3 w-100"
+          alt=""
+        />
+      </div>
+      <!-- icons -->
+      <div>
+        <span class="me-1 me-md-4">
+          <i data-feather="heart" class="icon-xxs me-2 text-info"></i>
+          <span>
+            20
+          </span>
+        </span>
+        <span class="me-1 me-md-4">
+          <i data-feather="message-square" class="icon-xxs me-2 text-info"></i>
+          <span>
+            12
+          </span>
+        </span>
+        <span>
+          <i data-feather="share-2" class="icon-xxs me-2 text-info"></i>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
