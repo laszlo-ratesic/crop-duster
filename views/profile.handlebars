@@ -72,13 +72,9 @@
             </div>
           </div>
           <div>
-            <a
-              href="#"
-              class="btn btn-outline-primary
-                      d-none d-md-block"
-            >
-              Edit Profile
-            </a>
+            <a href="/doodle" class="btn btn-white">
+            Graffiti wall
+          </a>
           </div>
         </div>
         <!-- nav -->
@@ -120,24 +116,17 @@
     <!-- row -->
     <div class="row">
       <div class="col-xl-6 col-lg-12 col-md-12 col-12 mb-6">
-          <!-- wall carousel -->
-<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="/images/blog/wall-80.png" class="d-block w-100" width="" height="800"
-    </div>
-  </div>
-  <canvas id="canvas" resize></canvas>
-</div></br>
-      </div>
-    </div>
-      <div class="col-xl-4 col-lg-12 col-md-12 col-12 mb-6">
         <!-- card -->
         <div class="card">
           <!-- card body -->
           <div class="card-body">
+            <!-- card title -->
+            <h4 class="card-title">
+              About Me
+            </h4>
             <span
-              class="text-uppercase fw-medium text-dark fs-5 ls-2"
+              class="text-uppercase fw-medium text-dark
+                      fs-5 ls-2"
             >
               Bio
             </span>
@@ -145,13 +134,10 @@
             <p class="mt-2 mb-6">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspen disse var ius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
             </p>
-            <!-- row -->
-            <div class="row">
-              
-            </div>
+
           </div>
         </div>
-        </div>
+      </div>
       <div class="col-xl-6 col-lg-12 col-md-12 col-12 mb-6">
         <!-- card -->
         <div class="card">
@@ -211,7 +197,6 @@
                       class="rounded-circle"
                     />
                   </span>
-                  
                 </div>
                 <div>
                   <!-- dropdown -->
@@ -979,57 +964,5 @@
         </div>
       </div>
     </div>
-    {{!-- <script src="/js/paper.js"></script>
-    <script type="text/javascript" src="../../dist/paper-full.js"></script>
-    <script type="text/paperscript" canvas="canvas">
-        var path;
-
-        var textItem = new PointText({
-            content: 'Click and drag to draw a line.',
-            point: new Point(20, 30),
-            fillColor: 'black',
-        });
-
-        function onMouseDown(event) {
-            // If we produced a path before, deselect it:
-            if (path) {
-                path.selected = false;
-            }
-
-            // Create a new path and set its stroke color to black:
-            path = new Path({
-                segments: [event.point],
-                strokeColor: 'black',
-                // Select the path, so we can see its segment points:
-                fullySelected: true
-            });
-        }
-
-        // While the user drags the mouse, points are added to the path
-        // at the position of the mouse:
-        function onMouseDrag(event) {
-            path.add(event.point);
-
-            // Update the content of the text item to show how many
-            // segments it has:
-            textItem.content = 'Segment count: ' + path.segments.length;
-        }
-
-        // When the mouse is released, we simplify the path:
-        function onMouseUp(event) {
-            var segmentCount = path.segments.length;
-
-            // When the mouse is released, simplify it:
-            path.simplify(10);
-
-            // Select the path, so we can see its segments:
-            path.fullySelected = true;
-
-            var newSegmentCount = path.segments.length;
-            var difference = segmentCount - newSegmentCount;
-            var percentage = 100 - Math.round(newSegmentCount / segmentCount * 100);
-            textItem.content = difference + ' of the ' + segmentCount + ' segments were removed. Saving ' + percentage + '%';
-
-        }
-    </script> --}}
   </div>
+</div>

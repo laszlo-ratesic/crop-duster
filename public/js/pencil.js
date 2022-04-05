@@ -15,7 +15,7 @@
     this.mouseTool.on('mousedown', this.onMouseDown.bind(this));
     this.mouseTool.on('mousedrag', this.onMouseDrag.bind(this));
     this.mouseTool.on('mouseup', this.onMouseUp.bind(this));
-  }
+  } 
 
   Sketch.prototype.onMouseDown = function (e) {
     this.isDrawing = true;
