@@ -1,5 +1,5 @@
 <!-- container -->
-<div class="container d-flex flex-column">
+<div class="container d-flex flex-column magic-hover magic-hover__square">
   <div class="row align-items-center justify-content-center g-0 min-vh-100">
     <div class="col-12 col-md-8 col-lg-6 col-xxl-4 py-8 py-xl-0">
       <!-- Card -->
@@ -17,13 +17,13 @@
             <p class="mb-6">Please enter your user information.</p>
           </div>
           <!-- Form -->
-          <form>
+          <form class="signup-form">
             <!-- Username -->
             <div class="mb-3">
               <label for="username" class="form-label">User Name</label>
               <input
                 type="text"
-                id="username"
+                id="username-signup"
                 class="form-control"
                 name="username"
                 placeholder="User Name"
@@ -35,7 +35,7 @@
               <label for="email" class="form-label">Email</label>
               <input
                 type="email"
-                id="email"
+                id="email-signup"
                 class="form-control"
                 name="email"
                 placeholder="Email address here"
@@ -47,7 +47,7 @@
               <label for="password" class="form-label">Password</label>
               <input
                 type="password"
-                id="password"
+                id="password-signup"
                 class="form-control"
                 name="password"
                 placeholder="**************"
@@ -75,6 +75,7 @@
                   type="checkbox"
                   class="form-check-input"
                   id="agreeCheck"
+                  required=""
                 />
                 <label class="form-check-label" for="agreeCheck">
                   <span class="fs-5">
@@ -111,3 +112,4 @@
     </div>
   </div>
 </div>
+<script src="/js/signup.js"></script>

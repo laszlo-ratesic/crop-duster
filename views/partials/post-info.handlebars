@@ -1,0 +1,50 @@
+<tr>
+  <td class="align-middle">
+    <div class="d-flex align-items-center">
+      <a href="/post/{{id}}">
+        <div class="ms-3 lh-1">
+          <h5 class="mb-1">
+            {{title}}
+          </h5>
+          <p class="mb-0">
+            {{subtitle}}
+          </p>
+        </div>
+      </a>
+    </div>
+  </td>
+  <td class="align-middle">
+    {{comments.length}}
+    {{format_plural 'comment' comments.length}}
+  </td>
+  <td class="align-middle">
+    {{format_date created_at}}
+  </td>
+  <td class="align-middle">
+    <div class="dropdown dropstart">
+      <a
+        class="text-muted text-primary-hover"
+        href="#"
+        role="button"
+        id="dropdownTeamOne"
+        data-bs-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        <i class="icon-xxs" data-feather="more-vertical"></i>
+      </a>
+      <div class="dropdown-menu" aria-labelledby="dropdownTeamOne">
+        <a class="dropdown-item" href="#">
+          Action
+        </a>
+        <a class="dropdown-item" href="#">
+          Another action
+        </a>
+        <a class="dropdown-item" href="#">
+          Something else
+                                here
+        </a>
+      </div>
+    </div>
+  </td>
+</tr>

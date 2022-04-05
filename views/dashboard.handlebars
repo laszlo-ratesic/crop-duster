@@ -1,8 +1,14 @@
 <!-- Container fluid -->
-<div class="bg-primary pt-10 pb-21"></div>
+<div class="bg-primary pt-10 pb-21" style="background: linear-gradient(45deg,#3a1c71, #d76d77,#ffaf7b);"></div>
 <div class="container-fluid mt-n22 px-6">
     {{!-- Header --}}
     {{> dashboard-header}}
+
+    {{!-- Post Form --}}
+    {{> post-form}}
+
+    {{!-- Your Posts --}}
+    {{> your-posts}}
 
     {{!-- Groups table --}}
     {{> groups-table}}
@@ -10,3 +16,4 @@
     {{!-- Connections --}}
     {{> connections}}
 </div>
+<script src="/js/post.js"></script>
