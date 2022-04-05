@@ -78,7 +78,7 @@
             <div class="mb-4">
               <!-- text -->
               <p class="mb-4">
-                  {{post.post_text}}
+                {{post.post_text}}
               </p>
               <img
                 src="/images/blog/blog-img-1.jpg"
@@ -101,7 +101,8 @@
                           text-muted me-2"
                 ></i>
                 <span>
-                  12 Comment
+                  {{post.comments.length}}
+                  {{format_plural 'comment' post.comments.length}}
                 </span>
               </span>
               <span>
@@ -152,38 +153,40 @@
                 </span>
               </div>
             </div>
+              {{> comments post.comments}}
             <!-- row -->
             <div class="row">
               <div class="col-xl-1 col-lg-2 col-md-2 col-12 mb-3 mb-lg-0">
                 <!-- avatar -->
                 <img
-                  src="/images/avatar/avatar-1.jpg"
+                  src="https://avatars.dicebear.com/api/croodles/{{id}}.svg?background=%23ffffff"
                   class="avatar avatar-md rounded-circle"
                   alt=""
                 />
               </div>
               <!-- input -->
               <div class="col-xl-11 col-lg-10 col-md-9 col-12">
+                    <form class="comment-form">
                 <div class="row g-3 align-items-center">
-                  <div class="col-md-2 col-xxl-1">
-                    <label for="name" class="col-form-label">
-                      Name
-                    </label>
-                  </div>
-                  <div class="col-md-8 col-xxl-9  mt-0 mt-md-3">
-                    <input
-                      type="password"
-                      id="name"
-                      class="form-control"
-                      aria-describedby="name"
-                    />
-                  </div>
-                  <div class="col-md-2 col-xxl-2">
-                    <button type="submit" class="btn btn-primary">
-                      Post
-                    </button>
-                  </div>
+                    <div class="col-md-2 col-xxl-1">
+                      <label for="name" class="col-form-label">
+                        {{username}}
+                      </label>
+                    </div>
+                      <div class="col-md-8 col-xxl-9  mt-0 mt-md-3">
+                        <textarea
+                          name="comment-text"
+                          class="form-control"
+                          aria-describedby="name"
+                        ></textarea>
+                      </div>
+                      <div class="col-md-2 col-xxl-2">
+                        <button type="submit" class="btn btn-primary">
+                          Comment
+                        </button>
+                      </div>
                 </div>
+                    </form>
               </div>
             </div>
           </div>
@@ -192,3 +195,4 @@
     </div>
   </div>
 </div>
+<script src="/js/comment.js"></script>

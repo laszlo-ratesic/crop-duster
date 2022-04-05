@@ -42,6 +42,7 @@ router.get('/post/:id', (req, res) => {
         post,
         loggedIn: req.session.loggedIn,
         id: req.session.user_id,
+        username: req.session.username
       });
     })
     .catch((err) => {
@@ -77,7 +78,7 @@ router.get('/pricing', (req, res) => {
 });
 
 router.get('/profile', (req, res) => {
-  res.render('profile');
+  res.render('profile', { id: req.session.user_id, loggedIn: req.session.loggedIn, username: req.session.username });
 });
 
 router.get('/settings', (req, res) => {

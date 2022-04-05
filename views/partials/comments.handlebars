@@ -1,0 +1,16 @@
+{{#each this}}
+<div class="border-bottom py-5 d-flex align-items-center mb-4">
+  <div class="me-2 me-md-3"></div>
+  <span class="avatar avatar-sm me-5">
+    <!-- img -->
+    <img
+      alt="avatar"
+      src="https://avatars.dicebear.com/api/croodles/{{user_id}}.svg?background=%23ffffff"
+      class="rounded-circle"
+    />
+  </span>
+  <span>
+    {{comment_text}}
+  </span>
+</div>
+{{/each}}
