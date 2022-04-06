@@ -1,6 +1,8 @@
 // Set up the sketchpad.  This uses paper.js to render the pencil markings.
 // The pencil itself is rendered as a 3D object using THREE.js, but we'll get to that later.
 // There are 2 canvases in use, one for the pencil and one for the actual sketch.
+  // color buttons
+  
 
 (function (window) {
   function Sketch() {
@@ -21,7 +23,73 @@
     this.isDrawing = true;
     this.currPath = new paper.Path();
 
+  // const blkButton = document.getElementById('black');
+  // const redButton = document.getElementById('red');
+  // const blueButton = document.getElementById('blue');
+  // const yelButton = document.getElementById('yellow');
+  // const purButton = document.getElementById('purple');
+  // const grnButton = document.getElementById('green');
+
+  // dif color pencils
+  var clicked = $(this).attr("id");
+  // this.currPath.fillColor = '#424242';
+  document.getElementById('black').onclick = function() {
+  console.log('black')
+  color()
+ }
+ document.getElementById('red').onclick = function() {
+  console.log('red')
+  color()
+}
+document.getElementById('blue').onclick = function() {
+  console.log('blue')
+  color()
+}
+document.getElementById('yellow').onclick = function() {
+  console.log('yellow')
+  color()
+}
+document.getElementById('purple').onclick = function() {
+  console.log('purple')
+  color()
+}
+document.getElementById('green').onclick = function() {
+  console.log('green')
+  color()
+}
+
+  function color() {
+ 
+  if (clicked === 'black'){
+     // black
     this.currPath.fillColor = '#424242';
+  }
+    else if (clicked === 'red'){
+      // red
+    this.currPath.fillColor = '#ed0505';
+  }
+  else if (clicked === 'blue'){
+     // blue
+    this.currPath.fillColor = '#0f57db';
+  }
+  else if (clicked === 'yellow'){
+     // yellow
+    this.currPath.fillColor = '#f6ff00';
+  }
+  else if (clicked === 'purple'){
+     // purple
+    this.currPath.fillColor = '#ff00d9';
+  } 
+  else if (clicked === 'green'){
+     // green
+    this.currPath.fillColor = '#1cd425';
+  }
+  // else{
+  //   this.currPath.fillColor = '#424242'
+  // }
+  
+ }
+// this.currPath.fillColor = '#424242';
 
     this.currPath.add(e.point);
   };
@@ -297,15 +365,6 @@ function render() {
   paper.view.draw();
 }
 
-
-// document.getElementById("save-btn").addEventListener("click", function(){
-//   save();
-//   console.log("click")
-// })
-
-// function save(){
-
-// }
 
 window.onload = () => {
   const sketch = document.getElementById('sketch');
