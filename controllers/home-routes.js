@@ -77,10 +77,6 @@ router.get('/pricing', (req, res) => {
   res.render('pricing');
 });
 
-router.get('/profile', (req, res) => {
-  res.render('profile', { id: req.session.user_id, loggedIn: req.session.loggedIn, username: req.session.username });
-});
-
 router.get('/settings', (req, res) => {
   res.render('settings');
 });

@@ -1,6 +1,6 @@
 options = {
   cursorOuter: 'circle-basic',
-  hoverEffect: 'pointer-overlay',
+  hoverEffect: 'circle-move',
   hoverItemMove: false,
   defaultCursor: false,
   outerWidth: 36,
