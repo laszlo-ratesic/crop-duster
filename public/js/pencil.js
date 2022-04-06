@@ -32,7 +32,7 @@
 
   // dif color pencils
   var clicked = $(this).attr("id");
-  // this.currPath.fillColor = '#424242';
+  this.currPath.fillColor = '#424242';
   document.getElementById('black').onclick = function() {
   console.log('black')
   color()
