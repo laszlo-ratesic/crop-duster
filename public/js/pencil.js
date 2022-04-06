@@ -15,7 +15,7 @@
     this.mouseTool.on('mousedown', this.onMouseDown.bind(this));
     this.mouseTool.on('mousedrag', this.onMouseDrag.bind(this));
     this.mouseTool.on('mouseup', this.onMouseUp.bind(this));
-  }
+  } 
 
   Sketch.prototype.onMouseDown = function (e) {
     this.isDrawing = true;
@@ -296,5 +296,87 @@ function render() {
   pencil.move(pencilPos.x, pencilPos.y);
   paper.view.draw();
 }
+
+
+// document.getElementById("save-btn").addEventListener("click", function(){
+//   save();
+//   console.log("click")
+// })
+
+// function save(){
+
+// }
+
+window.onload = () => {
+  const sketch = document.getElementById('sketch');
+  const saveButton = document.getElementById('save');
+  const loadInput = document.getElementById('load');
+
+  new Drawing(sketch, saveButton, loadInput);
+};
+
+class Drawing {
+  constructor(sketch, saveButton, loadInput) {
+    this.isDrawing = false;
+
+    sketch.addEventListener('mousedown', () => this.startDrawing());
+    sketch.addEventListener('mousemove', (event) => this.draw(event));
+    sketch.addEventListener('mouseup', () => this.stopDrawing());
+
+    saveButton.addEventListener('click', () => this.save());
+    loadInput.addEventListener('change', (event) => this.load(event));
+
+    const rect = sketch.getBoundingClientRect();
+
+    this.offsetLeft = rect.left;
+    this.offsetTop = rect.top;
+
+    this.sketch = sketch;
+    this.context = this.sketch.getContext('2d');
+  }
+  startDrawing() {
+    this.isDrawing = true;
+  }
+  stopDrawing() {
+    this.isDrawing = false;
+  }
+  draw(event) {
+    if (this.isDrawing) {
+      this.context.fillRect(event.pageX - this.offsetLeft, event.pageY - this.offsetTop, 2, 2);
+    }
+  }
+  save() {
+    const data = this.sketch.toDataURL('image/png');
+    const a = document.createElement('a');
+    a.href = data;
+    a.download = 'image.png';
+    a.click();
+  }
+  load(event) {
+    const file = [...event.target.files].pop();
+    this.readTheFile(file)
+      .then((image) => this.loadTheImage(image))
+  }
+  loadTheImage(image) {
+    const img = new Image();
+    const sketch = this.sketch;
+    img.onload = function () {
+      const context = sketch.getContext('2d');
+      context.clearRect(0, 0, sketch.width, sketch.height);
+      context.drawImage(img, 0, 0);
+    };
+    img.src = image;
+  }
+  readTheFile(file) {
+    const reader = new FileReader();
+    return new Promise((resolve) => {
+      reader.onload = (event) => {
+        resolve(event.target.result);
+      };
+      reader.readAsDataURL(file);
+    })
+  }
+}
+
 
 init();
