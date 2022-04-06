@@ -27,6 +27,7 @@
                       align-items-center"
             >
               <!-- avatar -->
+                <a href="/profile/{{post.user.id}}">
               <div class="d-flex align-items-center">
                 <div>
                   <img
@@ -44,6 +45,7 @@
                   </p>
                 </div>
               </div>
+                </a>
               <div>
                 <!-- dropdown -->
                 <div class="dropdown dropstart">
@@ -81,7 +83,7 @@
                 {{post.post_text}}
               </p>
               <img
-                src="/images/blog/blog-img-1.jpg"
+                src="https://doodleipsum.com/477x229/abstract?bg=lightgray&n={{id}}"
                 class="rounded-3 w-100"
                 alt=""
               />

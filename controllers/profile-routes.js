@@ -44,31 +44,41 @@ router.get('/', (req, res) => {
 });
 
 router.get('/:id', (req, res) => {
-  Post.findAll({
+  User.findOne({
     where: {
-      user_id: req.params.id,
+      id: req.params.id,
     },
-    attributes: ['id', 'title', 'subtitle', 'post_text', 'created_at'],
+    attributes: ['id', 'username'],
     include: [
       {
-        model: Comment,
-        attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
-        include: {
-          model: User,
-          attributes: ['username'],
-        },
+        model: Post,
+        attributes: ['id', 'title', 'subtitle', 'post_text', 'created_at'],
+        include: [
+          {
+            model: Comment,
+            attributes: [
+              'id',
+              'comment_text',
+              'post_id',
+              'user_id',
+              'created_at',
+            ],
+            include: {
+              model: User,
+              attributes: ['username'],
+            },
+          },
+        ],
       },
     ],
   })
-    .then((dbPostData) => {
-      const posts = dbPostData.map((post) => post.get({ plain: true }));
+    .then((dbUserData) => {
+      const user = dbUserData.get({ plain: true });
       res.render('profile', {
-        posts,
+        user,
         loggedIn: req.session.loggedIn,
         id: req.session.user_id,
         username: req.session.username,
-        user_id: req.params.id,
-        profile_name: posts.user_id,
       });
     })
     .catch((err) => {
