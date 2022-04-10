@@ -1,77 +1,108 @@
-* {
-  cursor: none;
-}
-
-#bg {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  background-color: #485AA6;
-}
-
-#intro {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/356608/pencil-intro.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-#wrapper {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-#pencil3D {
-  pointer-events: none;
-}
-
-#sketchpad {
-  position: absolute;
-  left: 50px;
-  top: 50px;
-  background-color: #fafafa;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  -webkit-box-shadow: 0px 3px 12px -2px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 3px 12px -2px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 3px 12px -2px rgba(0, 0, 0, 0.75);
-}
-
-/* canvas buttons */
-#save{
-  /* z-index: 1000
-  ; */
-
-}
-
-#back-btn{
-  /* z-index: 1000
-  ; */
-
-}
-
-#load{
-
-}
-
-.container {
+/* .container {
   display: flex;
   flex-direction:column;
+} */
+
+html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: white;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+#color {
+    border-radius: 50px;
+    transition: background-color 0.5s ease;
+    margin-top: 30px;
+    width: 100px;
+    height: 100px;
+    background-color: #6441A4;
+    float: left;
+    position: relative;
+    left: -50%;
+}
+
+#color-container {
+    float: left;
+    position: relative;
+    left: 50%;
+}
+
+.clearbtn{
+    position:fixed; 
+    top:0; 
+    margin: 10px; 
+    padding:10px; 
+    right:0; 
+    border-radius:50%; 
+    background:#624bff;; 
+    cursor:pointer;
+    z-index: 1000;
+}
+
+.full-height{
+    width: 100%;
+    height: 100%;
+}
+.full-height canvas{
+    width:100%; 
+    height:100%;
+    background-color: snow;
+}
+
+.bottombar{
+    position:fixed; 
+    bottom:0; 
+    left:0; 
+    padding:5px 0; 
+    width:100%; 
+    background-color:lightgray;
+}
+
+.color-list{
+    list-style: n;
+}
+.color-list li{
+    float: left;
+    padding: 0 5px;
+}
+
+/***************************
+ * color picker 
+ ***************************/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+#color-input{ display: none;}
+#c-label{
+  margin-left: 15px;
+  position: absolute;
+  height: 30px;
+  width: 50px;
+  border-radius: 5px;
+  bottom:5px;
+}
+#color-input:checked ~ 
+#c-picker{
+  opacity:1;
+}
+#c-picker{
+  position: absolute;
+/*   float: right; */
+  left: 70px;
+  bottom: 50px;
+  background-color: white;
+  height:150px;
+  width:180px;
+  border: solid 1px #ccc;
+  opacity:0;
+  padding:5px;
+/*   z-index:1000; */
+}
+canvas:hover{
+  cursor: crosshair;
 }
 
 .card-body .mb-3 img {
