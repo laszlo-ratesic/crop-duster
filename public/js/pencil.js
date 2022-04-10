@@ -189,9 +189,14 @@ class Drawing {
       reader.readAsDataURL(file);
     })
   }
-  // post() {
-  //   const img = new Image();
-  //   const myCanvas = this.myCanvas;
-
-  // }
+  post() {
+    const data = this.myCanvas.toDataURL('image/png');
+    const reader = new FileReader();
+    return new Promise((resolve) => {
+      reader.onload = (event) => {
+        resolve(event.target.result);
+      };
+      reader.readAsDataURL(data);
+    }).then((image) => this.loadTheImage(image));
+  }
 }
