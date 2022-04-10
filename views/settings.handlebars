@@ -5,15 +5,15 @@
       <!-- Page header -->
 
       <div class="border-bottom pb-4 mb-4">
-        <h3 class="mb-0 fw-bold">General</h3>
+        <h3 class="mb-0 fw-bold text-light">General</h3>
       </div>
     </div>
   </div>
   <div class="row mb-8">
     <div class="col-xl-3 col-lg-4 col-md-12 col-12">
       <div class="mb-4 mb-lg-0">
-        <h4 class="mb-1">General Setting</h4>
-        <p class="mb-0 fs-5 text-muted">Profile configuration settings</p>
+        <h4 class="mb-1 text-light">General Setting</h4>
+        <p class="mb-0 fs-5 text-light">Profile configuration settings</p>
       </div>
     </div>
 
@@ -33,15 +33,18 @@
               <div class="d-flex align-items-center">
                 <div class="me-3">
                   <img
-                    src="./images/avatar/avatar-5.jpg"
+                    src="https://avatars.dicebear.com/api/croodles/{{user.id}}.svg?background=%23ffffff"
                     class="rounded-circle avatar avatar-lg"
                     alt=""
                   />
                 </div>
                 <div>
-                  <button type="submit" class="btn btn-outline-white me-1">
-                    Change
-                  </button>
+                  <button type="button" class="btn btn-outline-white me-1" id="changeBtn">
+                    <label for="file">
+                      Change
+                    </label>
+                  </input>
+                  <input type="file" id="file" style="display:none;"/>
                   <button type="submit" class="btn btn-outline-white">
                     Remove
                   </button>
@@ -62,7 +65,7 @@
                   <div class="fallback">
                     <input name="file" type="file" multiple />
                   </div>
-                </form>
+                </form>               
                 <button type="submit" class="btn btn-outline-white">
                   Change
                 </button>
@@ -153,43 +156,8 @@
                   </select>
                 </div>
               </div>
-              <!-- row -->
-              <div class="mb-3 row">
-                <label
-                  for="addressLine"
-                  class="col-sm-4 col-form-label form-label"
-                >
-                  Address line 1
-                </label>
-
-                <div class="col-md-8 col-12">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="placeholder"
-                    id="addressLine"
-                    required
-                  />
-                </div>
-              </div>
-              <!-- row -->
-              <div class="mb-3 row">
-                <label
-                  for="addressLineTwo"
-                  class="col-sm-4 col-form-label form-label"
-                >
-                  Address line 2
-                </label>
-                <div class="col-md-8 col-12">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="placeholder"
-                    id="addressLineTwo"
-                    required
-                  />
-                </div>
-              </div>
+              
+             
               <!-- row -->
               <div class="row align-items-center">
                 <label for="zipcode" class="col-sm-4 col-form-label form-label">
@@ -207,7 +175,7 @@
                   />
                 </div>
                 <div class="offset-md-4 col-md-8 mt-4">
-                  <button type="submit" class="btn btn-primary">
+                  <button type="submit" class="btn btn-primary" id="save1">
                     Save Changes
                   </button>
                 </div>
@@ -221,8 +189,8 @@
   <div class="row mb-8">
     <div class="col-xl-3 col-lg-4 col-md-12 col-12">
       <div class="mb-4 mb-lg-0">
-        <h4 class="mb-1">Email Setting</h4>
-        <p class="mb-0 fs-5 text-muted">Add an email settings to profile</p>
+        <h4 class="mb-1 text-light">Password Settings</h4>
+        <p class="mb-0 fs-5 text-light">Manage your password preferences</p>
       </div>
     </div>
 
@@ -231,38 +199,6 @@
       <div class="card" id="edit">
         <!-- card body -->
         <div class="card-body">
-          <div class="mb-6">
-            <h4 class="mb-1">Email</h4>
-          </div>
-          <form>
-            <!-- row -->
-            <div class="mb-3 row">
-              <!-- label -->
-              <label
-                for="newEmailAddress"
-                class="col-sm-4 col-form-label form-label"
-              >
-                New email
-              </label>
-              <div class="col-md-8 col-12">
-                <!-- input -->
-                <input
-                  type="email"
-                  class="form-control"
-                  placeholder="Enter your email address"
-                  id="newEmailAddress"
-                  required
-                />
-              </div>
-              <!-- button -->
-              <div class="offset-md-4 col-md-8 col-12 mt-3">
-                <button type="submit" class="btn btn-primary">
-                  Save Changes
-                </button>
-              </div>
-            </div>
-          </form>
-
           <div class="mb-6 mt-6">
             <h4 class="mb-1">Change your password</h4>
           </div>
@@ -346,8 +282,8 @@
   <div class="row mb-8">
     <div class="col-xl-3 col-lg-4 col-md-12 col-12">
       <div class="mb-4 mb-lg-0">
-        <h4 class="mb-1">Preferences</h4>
-        <p class="mb-0 fs-5 text-muted">Configure your preferences</p>
+        <h4 class="mb-1 text-light">Preferences</h4>
+        <p class="mb-0 fs-5 text-light">Configure your preferences</p>
       </div>
     </div>
 
@@ -370,6 +306,17 @@
                   <option value="1">Hindi</option>
                   <option value="2">Spanish</option>
                   <option value="3">Arabic</option>
+                  <option value="4">Mandarin</option>
+                  <option value="5">French</option>
+                  <option value="6">Bengali</option>
+                  <option value="7">Russian</option>
+                  <option value="8">Portuguese</option>
+                  <option value="9">Indonesian</option>
+                  <option value="10">Bengali</option>
+                  <option value="11">Punjabi</option>
+                  <option value="12">German</option>
+                  <option value="13">Japanese</option>
+                  <option value="14">Persian</option>
                 </select>
               </div>
             </div>
@@ -381,33 +328,19 @@
 
               <div class="col-md-8 col-12">
                 <select class="form-select" id="timeZone">
-                  <option selected>GMT +5.30</option>
-                  <option value="1">GMT +5.30</option>
-                  <option value="2">GMT +5.30</option>
-                  <option value="3">GMT +5.30</option>
+                  <option selected>Central Daylight Time (GMT-5)</option>
+                  <option value="1">Mountain Daylight Time (GMT-6)</option>
+                  <option value="2">Pacific Daylight Time (GMT-7)</option>
+                  <option value="3">Alaska Daylight Time (GMT-8)</option>
+                  <option value="4">Hawaii-Aleutian Standard Time (GMT-10)</option>
                 </select>
               </div>
             </div>
-            <!-- row -->
-            <div class="mb-3 row">
-              <label
-                for="dateFormat"
-                class="col-sm-4 col-form-label form-label"
-              >
-                Date Format
-              </label>
-
-              <div class="col-md-8 col-12">
-                <select class="form-select" id="dateFormat">
-                  <option selected>No Preference</option>
-                  <option value="Preference">Preference</option>
-                </select>
-              </div>
-            </div>
+          
 
             <!-- row -->
             <div class="mb-3 row">
-              <label class="col-sm-4 col-form-label form-label">Default</label>
+              <label class="col-sm-4 col-form-label form-label">Allow comments on your posts</label>
               <div class="col-md-8 col-12">
                 <div class="form-check custom-radio form-check-inline">
                   <input
@@ -436,7 +369,7 @@
             <!-- row -->
             <div class="mb-3 row">
               <div class="col-md-4 col-12">
-                <label class="mb-0 form-label">Choose option default</label>
+                <label class="mb-0 form-label">Choose who can view your account</label>
               </div>
               <div class="col-md-8 col-12">
                 <div class="form-check mb-2">
@@ -446,7 +379,7 @@
                     id="customChecktellMe"
                   />
                   <label class="form-check-label" for="customChecktellMe">
-                    Tell me
+                    Friends Only
                   </label>
                 </div>
                 <div class="form-check mb-2">
@@ -456,7 +389,7 @@
                     id="customCheckemail"
                   />
                   <label class="form-check-label" for="customCheckemail">
-                    Open e-mail
+                    Friends of friends
                   </label>
                 </div>
                 <div class="form-check mb-2">
@@ -467,12 +400,12 @@
                     checked
                   />
                   <label class="form-check-label" for="customCheckemailTwo">
-                    Show default
+                    Everyone
                   </label>
                 </div>
               </div>
               <div class="offset-md-4 col-md-8 col-12 mt-2">
-                <button type="submit" class="btn btn-primary">
+                <button type="submit" class="btn btn-primary" id="save2">
                   Save Changes
                 </button>
               </div>
@@ -485,8 +418,8 @@
   <div class="row mb-8">
     <div class="col-xl-3 col-lg-4 col-md-12 col-12">
       <div class="mb-4 mb-lg-0">
-        <h4 class="mb-1">Notifications</h4>
-        <p class="mb-0 fs-5 text-muted">Change notification settings</p>
+        <h4 class="mb-1 text-light">Notifications</h4>
+        <p class="mb-0 fs-5 text-light">Change notification settings</p>
       </div>
     </div>
 
@@ -571,44 +504,11 @@
                     </div>
                   </td>
                 </tr>
-                <tr>
-                  <td class="border-top-0">
-                    When a Files is shared with a team
-                  </td>
-                  <td class="border-top-0">
-                    <div class="form-check">
-                      <input
-                        type="checkbox"
-                        class="form-check-input"
-                        id="customCheckFour"
-                      />
-                      <label
-                        class="form-check-label"
-                        for="customCheckFour"
-                      ></label>
-                    </div>
-                  </td>
-                  <td class="border-top-0">
-                    <i data-feather="minus" class="text-muted icon-sm"></i>
-                  </td>
-                  <td class="border-top-0">
-                    <div class="form-check">
-                      <input
-                        type="checkbox"
-                        class="form-check-input"
-                        id="customCheckFive"
-                      />
-                      <label
-                        class="form-check-label"
-                        for="customCheckFive"
-                      ></label>
-                    </div>
-                  </td>
-                </tr>
+              
 
                 <tr>
                   <td class="border-top-0">
-                    When someone requests access to my design
+                    When someone sends me a friend request
                   </td>
                   <td class="border-top-0">
                     <div class="form-check">
@@ -721,61 +621,12 @@
               </tbody>
             </table>
           </div>
-          <div class="table-responsive mb-3">
-            <table class="table text-nowrap">
-              <thead class="table-light">
-                <tr>
-                  <th class="w-75">Project activity activity</th>
-                  <th>
-                    <i data-feather="smartphone" class="me-2 icon-sm"></i>
-                  </th>
-                  <th><i data-feather="slack" class="me-2 icon-sm"></i></th>
-                  <th><i data-feather="mail" class="me-2 icon-sm"></i></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="border-top-0">
-                    When someone adds me to a project
-                  </td>
-                  <td class="border-top-0">
-                    <div class="form-check">
-                      <input
-                        type="checkbox"
-                        class="form-check-input"
-                        id="customCheckThirteen"
-                      />
-                      <label
-                        class="form-check-label"
-                        for="customCheckThirteen"
-                      ></label>
-                    </div>
-                  </td>
-                  <td class="border-top-0">
-                    <i class="text-muted icon-sm" data-feather="minus"></i>
-                  </td>
-                  <td class="border-top-0">
-                    <div class="form-check">
-                      <input
-                        type="checkbox"
-                        class="form-check-input"
-                        id="customCheckFourteen"
-                      />
-                      <label
-                        class="form-check-label"
-                        for="customCheckFourteen"
-                      ></label>
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+
           <div class="table-responsive">
             <table class="table mb-0 text-nowrap">
               <thead class="table-light">
                 <tr>
-                  <th class="w-75">Team activity</th>
+                  <th class="w-75">Graffiti Board</th>
                   <th>
                     <i data-feather="smartphone" class="me-2 icon-sm"></i>
                   </th>
@@ -830,7 +681,7 @@
                 </tr>
                 <tr>
                   <td class="border-top-0">
-                    When someone requests access to my team
+                    When someone requests access to my graffiti board
                   </td>
                   <td class="border-top-0">
                     <div class="form-check">
@@ -865,7 +716,7 @@
 
                 <tr>
                   <td class="border-bottom-0">
-                    When someone invites me to a team
+                    When someone invites me to their graffiti board
                   </td>
                   <td class="border-bottom-0">
                     <div class="form-check">
@@ -911,36 +762,7 @@
             </table>
           </div>
           <hr class="my-6" />
-          <div class="row">
-            <div class="col-xl-6 col-md-12 mb-3">
-              <label for="notification" class="form-label">
-                When should we send you notifications?
-              </label>
-              <select class="form-select" id="notification">
-                <option selected>Always</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-              </select>
-            </div>
-            <div class="col-xl-3 col-md-6 mb-3">
-              <label for="dailyDigest" class="form-label">Daily Digest</label>
-              <select class="form-select" id="dailyDigest">
-                <option selected>Everyday</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-              </select>
-            </div>
-            <div class="col-xl-3 col-md-6 mb-3">
-              <label for="time" class="form-label">Time</label>
-              <select class="form-select" id="time">
-                <option selected>2PM</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-              </select>
-            </div>
+        
             <div class="col-xl-3 col-md-12">
               <button type="submit" class="btn btn-primary">
                 Save Changes
@@ -954,8 +776,8 @@
   <div class="row">
     <div class="col-xl-3 col-lg-4 col-md-12 col-12">
       <div class="mb-4 mb-lg-0">
-        <h4 class="mb-1">Delete Account</h4>
-        <p class="mb-0 fs-5 text-muted">Easily set up social media accounts</p>
+        <h4 class="mb-1 text-light">Delete Account</h4>
+        <p class="mb-0 fs-5 text-light"></p>
       </div>
     </div>
 
@@ -978,7 +800,7 @@
             <a href="#" class="btn btn-danger">Delete Account</a>
             <p class="small mb-0 mt-3">
               Feel free to contact with any
-              <a href="#">dashui@example.com</a>
+              <a href="#">watercolor@support.com</a>
               questions.
             </p>
           </div>
@@ -987,3 +809,4 @@
     </div>
   </div>
 </div>
+<script src="/js/settings.js"></script>

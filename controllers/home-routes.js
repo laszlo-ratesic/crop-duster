@@ -74,19 +74,15 @@ router.get('/doodle', (req, res) => {
 });
 
 router.get('/pricing', (req, res) => {
-  res.render('pricing');
-});
-
-router.get('/profile', (req, res) => {
-  res.render('profile', { id: req.session.user_id, loggedIn: req.session.loggedIn, username: req.session.username });
+  res.render('pricing', { loggedIn: req.session.loggedIn });
 });
 
 router.get('/settings', (req, res) => {
-  res.render('settings');
+  res.render('settings', { loggedIn: req.session.loggedIn });
 });
 
 router.get('/billing', (req, res) => {
-  res.render('billing');
+  res.render('billing', { loggedIn: req.session.loggedIn });
 });
 
 module.exports = router;

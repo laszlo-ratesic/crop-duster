@@ -5,8 +5,8 @@
     <!-- Brand logo -->
     <a class="magic-hover magic-hover__square navbar-brand" href="/">
       <img
-        src="/images/brand/logo/logo.png"
-        style="width: 200px; height: auto;"
+        src="/images/brand/logo/5.png"
+        style="width: 200px; height: auto; margin-bottom: -10%;"
         alt="Crop Duster logo"
       />
     </a>
@@ -23,6 +23,12 @@
         <a class="magic-hover magic-hover__square nav-link has-arrow" href="/stream">
           <i data-feather="droplet" class="nav-icon icon-xs me-2"></i>
           Stream
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="magic-hover magic-hover__square nav-link has-arrow" href="/doodle">
+          <i data-feather="pen-tool" class="nav-icon icon-xs me-2"></i>
+          Graffiti Wall
         </a>
       </li>
       {{! Sub-heading }}
@@ -63,7 +69,7 @@
       {{else}}
       {{! Profile }}
       <li class="nav-item">
-        <a class="magic-hover magic-hover__square nav-link" href="/profile">
+        <a class="magic-hover magic-hover__square nav-link" href="/profile/{{id}}">
           <i data-feather="user" class="nav-icon icon-xs me-2"></i>
           Profile
         </a>

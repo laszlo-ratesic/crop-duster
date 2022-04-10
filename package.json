@@ -28,9 +28,10 @@
     "express-session": "^1.17.2",
     "feather-icons": "^4.28.0",
     "gradient-string": "^2.0.0",
+    "mysql2": "^2.3.3",
+    "paper": "^0.12.15",
     "imagesloaded": "^5.0.0",
     "infinite-scroll": "^4.0.1",
-    "masonry-layout": "^4.2.2",
-    "mysql2": "^2.3.3"
+    "masonry-layout": "^4.2.2"
   }
 }

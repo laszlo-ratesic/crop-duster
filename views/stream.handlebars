@@ -17,34 +17,27 @@
       {{#each posts as |post|}}
           {{> card post}}
       {{/each}}
-        {{> new-user-card}}
-        {{> quote-card}}
-        {{> wilson}}
-        {{> app-message-card}}
-        {{> announcement-card}}
-        {{> image-card}}
-        {{> opinion-card}}
-        {{> new-user-card}}
-        {{> quote-card}}
-        {{> wilson}}
-        {{> app-message-card}}
-        {{> announcement-card}}
-        {{> image-card}}
-        {{> opinion-card}}
-        {{> new-user-card}}
-        {{> quote-card}}
-        {{> wilson}}
-        {{> app-message-card}}
-        {{> announcement-card}}
-        {{> image-card}}
-        {{> opinion-card}}
-        {{> new-user-card}}
-        {{> quote-card}}
-        {{> wilson}}
-        {{> app-message-card}}
-        {{> announcement-card}}
-        {{> image-card}}
-        {{> opinion-card}}
     </div>
   </div>
 </div>
+
+<script type="text/javascript">
+  const cardImages = document.querySelectorAll('.card-image');
+  const cardImgs = document.querySelectorAll('.card-image img');
+
+  const renderCard = () => {
+    // remove loading effect
+    cardImages.forEach((cardImage) => {
+      cardImage.classList.remove('loading');
+    })
+
+    // show the hidden image
+    cardImgs.forEach((cardImg) => {
+      cardImg.style.visibility = 'visible'
+    })
+  }
+
+  setTimeout(() => {
+    renderCard();
+  }, 4000);
+</script>

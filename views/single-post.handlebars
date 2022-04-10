@@ -27,6 +27,7 @@
                       align-items-center"
             >
               <!-- avatar -->
+                <a href="/profile/{{post.user.id}}">
               <div class="d-flex align-items-center">
                 <div>
                   <img
@@ -44,6 +45,7 @@
                   </p>
                 </div>
               </div>
+                </a>
               <div>
                 <!-- dropdown -->
                 <div class="dropdown dropstart">
@@ -81,19 +83,13 @@
                 {{post.post_text}}
               </p>
               <img
-                src="/images/blog/blog-img-1.jpg"
+                src="https://doodleipsum.com/477x229/abstract?bg=lightgray&n={{id}}"
                 class="rounded-3 w-100"
                 alt=""
               />
             </div>
             <!-- icons -->
             <div class="mb-4">
-              <span class="me-1 me-md-4">
-                <i data-feather="heart" class="icon-xxs text-muted me-2"></i>
-                <span>
-                  20 Like
-                </span>
-              </span>
               <span class="me-1 me-md-4">
                 <i
                   data-feather="message-square"
@@ -103,16 +99,6 @@
                 <span>
                   {{post.comments.length}}
                   {{format_plural 'comment' post.comments.length}}
-                </span>
-              </span>
-              <span>
-                <i
-                  data-feather="share-2"
-                  class="icon-xxs
-                          text-muted me-2"
-                ></i>
-                <span>
-                  Share
                 </span>
               </span>
             </div>

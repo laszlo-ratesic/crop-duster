@@ -7,7 +7,7 @@ $(window).on('load', function () {
         var objectBottom = $(this).offset().top + $(this).outerHeight();
 
         /* If the element is completely within bounds of the window, fade it in */
-        if ((objectBottom * .9) < windowBottom) {
+        if ((objectBottom * .75) < windowBottom) {
           //object comes into view (scrolling down)
           if ($(this).css('opacity') == 0) {
             $(this).fadeTo(350, 1);
