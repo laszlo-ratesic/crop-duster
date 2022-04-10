@@ -1,27 +1,19 @@
 <div>
-      {{!-- <button id="save-btn" type="button" class="btn btn-primary">
-  save
-</button>
-<input 
-  type="file"
-  id="load"
-  name="avatar"
-  accept="image/png"
-> --}}
 <div class="container">
   
   <div>
     <a class="magic-hover magic-hover__square nav-link" href="/profile">
           <i data-feather="user" class="nav-icon icon-xs me-2"></i>
-          Profile 
+          Profile
     <input 
       type="file"
       id="load"
       name="avatar"
       accept="image/png"
     >
-     
         </a>
+    
+    {{!-- color buttons --}}
     <button id="save" type="button" class='btn btn-primary'>
       save
     </button>
@@ -45,22 +37,13 @@
     </button>
   </div>
 </div>
-      
-    </div>
-<div id='wrapper'>
-  <div id='bg'></div>
-  <div id='intro'></div>
-  <div id='sketchpad'>
-    
-  </div>
-  <canvas id='sketch'></canvas>
-  <div id='shadow'></div>
 
-  <canvas id='pencil3D'></canvas>
-  {{!-- <div>
-    <canvas id="canvas" width="500" height="500"></canvas>
-  </div> --}}
-</div>
+{{!-- canvas --}}
+<div id="app" class="full-height">
+            <button id="clear" class="clearbtn">Clear</button>
+            <canvas id="myCanvas"></canvas>
+        </div>
+
 {{! Pencil JS }}
 <script
   src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js'
@@ -75,3 +58,4 @@
   src='https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.11.4/paper-core.min.js'
 ></script>
 <script src='/js/pencil.js'></script>
+
