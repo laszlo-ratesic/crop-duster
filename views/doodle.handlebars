@@ -1,38 +1,41 @@
 <div>
 <div class="container">
-  
+
   <div>
-    <a class="magic-hover magic-hover__square nav-link" href="/profile">
+    <a class="nav-link" href="/profile">
           <i data-feather="user" class="nav-icon icon-xs me-2"></i>
           Profile
-    <input 
+    <input
       type="file"
       id="load"
       name="avatar"
       accept="image/png"
     >
         </a>
-    
+
     {{!-- color buttons --}}
-    <button id="save" type="button" class='btn btn-primary'>
-      save
+    <button id="save" type="button" class='magic-hover magic-hover__square btn btn-info'>
+      Download
     </button>
-    <button id="black" type="button" class='btn btn-primary'>
+    <button id="post" type="button" class='magic-hover magic-hover__square btn btn-secondary'>
+      Post
+    </button>
+    <button id="black" type="button" class='magic-hover magic-hover__square btn btn-dark'>
       black
     </button>
-     <button id="red" type="button" class='btn btn-primary'>
+     <button id="red" type="button" class='magic-hover magic-hover__square btn btn-danger'>
       red
     </button>
-     <button id="blue" type="button" class='btn btn-primary'>
+     <button id="blue" type="button" class='magic-hover magic-hover__square btn btn-primary'>
       blue
     </button>
-     <button id="yellow" type="button" class='btn btn-primary'>
+     <button id="yellow" type="button" class='magic-hover magic-hover__square btn btn-warning'>
       yellow
     </button>
-     <button id="purple" type="button" class='btn btn-primary'>
+     <button id="purple" type="button" class='magic-hover magic-hover__square btn text-light' style="background-color: purple;">
       purple
     </button>
-     <button id="green" type="button" class='btn btn-primary'>
+     <button id="green" type="button" class='magic-hover magic-hover__square btn btn-success'>
       green
     </button>
   </div>
@@ -40,20 +43,11 @@
 
 {{!-- canvas --}}
 <div id="app" class="full-height">
-            <button id="clear" class="clearbtn">Clear</button>
+            <button id="clear" class="clearbtn magic-hover magic-hover__square">Clear</button>
             <canvas id="myCanvas"></canvas>
         </div>
 
 {{! Pencil JS }}
-<script
-  src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js'
-></script>
-<script
-  src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r77/three.min.js'
-></script>
-<script
-  src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/356608/OBJLoader.js'
-></script>
 <script
   src='https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.11.4/paper-core.min.js'
 ></script>
