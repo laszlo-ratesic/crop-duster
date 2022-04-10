@@ -48,6 +48,9 @@ Replacing the above placeholder with the link copied from GitHub. This will clon
 
 As a visual artist, I want to have a unique and clean social media platfiorm to properly display my creativity. Along with being able to see other users' works in the same place and be able to put my opinion on it.
 
+Link to walkthrough video included below.
+
+![Mockup of Blockdust.](./public/images/Animation.gif)
 
 ## 🥂 Credits
 
