@@ -35,3 +35,10 @@ async function postFormHandler(event) {
 document
   .querySelector('.post-form')
   .addEventListener('submit', postFormHandler);
+
+// doodle file logic
+  document.getElementById('buttonid').addEventListener('click', openDialog);
+
+function openDialog() {
+  document.getElementById('fileid').click();
+}
