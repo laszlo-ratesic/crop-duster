@@ -6,18 +6,18 @@
  var ctx = canvas.getContext('2d');
  var painting = document.getElementById('app');
  var paintStyle = getComputedStyle(painting);
- 
+
  canvas.width = window.innerWidth;
  canvas.height = window.innerHeight;
- 
+
  var mouse = {x: 0, y: 0};
  var clearBtn = document.getElementById('clear');
- 
+
  canvas.addEventListener('mousemove', function(e){
      mouse.x = e.pageX - this.offsetLeft;
      mouse.y = e.pageY - this.offsetTop;
  }, false);
- 
+
  ctx.lineWidth = 3;
  ctx.lineJoin = 'round';
  ctx.lineCap = 'round';
@@ -45,29 +45,29 @@ document.getElementById('green').onclick = function() {
   ctx.strokeStyle = '#00ff2f'
   console.log('green')
 }
- 
+
  canvas.addEventListener('mousedown', function(e){
      ctx.beginPath();
 
-     
+
      ctx.moveTo(mouse.x, mouse.y);
      canvas.addEventListener('mousemove', onPaint, false);
  }, false);
- 
+
  canvas.addEventListener('mouseup', function(){
      canvas.removeEventListener('mousemove', onPaint, false);
  }, false);
- 
+
  var onPaint = function(){
      ctx.lineTo(mouse.x, mouse.y);
      ctx.stroke();
  };
- 
+
  function clear(){
      ctx.clearRect(0, 0, canvas.width, canvas.height);
  };
  clearBtn.addEventListener('click', clear);
- 
+
  //click
  function click(e){
    clX = e.offsetX;
@@ -113,21 +113,22 @@ document.getElementById('green').onclick = function() {
    clY = e.offsetY;
    var imgData = ctx1.getImageData(clX,clY,1,1).data;
    rgbaColor = 'rgba(' + imgData[0] + ',' + imgData[1] + ',' + imgData[2] + ',1)';
-   
+
    cLabel.style.backgroundColor = rgbaColor;
  }
 
- // saving 
+ // saving
 window.onload = () => {
   const myCanvas = document.getElementById('myCanvas');
   const saveButton = document.getElementById('save');
   const loadInput = document.getElementById('load');
+  const postButton = document.getElementById('post');
 
-  new Drawing(myCanvas, saveButton, loadInput);
+  new Drawing(myCanvas, saveButton, loadInput, postButton);
 };
 
 class Drawing {
-  constructor(myCanvas, saveButton, loadInput) {
+  constructor(myCanvas, saveButton, loadInput, postButton) {
     this.isDrawing = false;
 
     myCanvas.addEventListener('mousedown', () => this.startDrawing());
@@ -136,6 +137,7 @@ class Drawing {
 
     saveButton.addEventListener('click', () => this.save());
     loadInput.addEventListener('change', (event) => this.load(event));
+    postButton.addEventListener('click', () => this.post());
 
     const rect = myCanvas.getBoundingClientRect();
 
@@ -187,4 +189,9 @@ class Drawing {
       reader.readAsDataURL(file);
     })
   }
+  // post() {
+  //   const img = new Image();
+  //   const myCanvas = this.myCanvas;
+
+  // }
 }
